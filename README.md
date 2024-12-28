@@ -1,10 +1,16 @@
-Role Name
+Lighthouse
 =========
+
+Клон репозитория с Lighthouse
+Настройка nginx
 
 A brief description of the role goes here.
 
 Requirements
 ------------
+Debian 12
+ansible [core 2.14.16]
+python version = 3.11
 
 Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
 
@@ -15,11 +21,16 @@ A description of the settable variables for this role should go here, including 
 
 Dependencies
 ------------
+lighthouse.j2 - конфиг nginx
 
 A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
 Example Playbook
 ----------------
+
+  hosts: lighthouse
+  roles:
+    - role: lighthouse-role
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
